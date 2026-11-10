@@ -1,0 +1,67 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261109002021
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+== A. Sao luu logic ==
+[pg_dump -Fc (nen)] 0.53 giay
+[pg_dump -Fp (SQL thuan)] 0.42 giay
+[pg_dumpall --globals-only] 0.20 giay
+
+Name             Length
+----             ------
+globals.sql         526
+ketoan_full.dump  47780
+ketoan_full.sql   43617
+
+
+-- Khoi phuc thu ban logic vao database moi ketoan_restored --
+NOTICE:  database "ketoan_restored" does not exist, skipping
+DROP DATABASE
+CREATE DATABASE
+[pg_restore (khoi phuc logic)] 0.38 giay
+ ct | sc | lech
+----+----+------
+  9 | 30 |    0
+(1 row)
+KET QUA logic: PASS (ban khoi phuc khop ban goc, lech = 0)
+== B. Sao luu vat ly toan phan ==
+[pg_basebackup toan phan] 14.31 giay
+backup successfully verified
+== C. Them 2 chung tu roi sao luu gia tang ==
+psql:F:/lab5/them_ct.sql:10: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 10 (1 dÃ²ng, tá»•ng tiá»n 100000.00)
+psql:F:/lab5/them_ct.sql:10: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 11 (1 dÃ²ng, tá»•ng tiá»n 100000.00)
+ ct | sc | lech
+----+----+------
+ 11 | 34 |    0
+(1 row)
+Du lieu sau khi them: PASS (11 chung tu, 34 dong so cai)
+[pg_basebackup gia tang] 11.60 giay
+[pg_combinebackup (ghep)] 12.91 giay
+backup successfully verified
+
+Thu_muc         MB
+-------         --
+base_full     56.2
+base_inc1     21.3
+base_combined 56.3
+
+
+Xong buoc sao luu. Chay tiep 03_xoa_nham.ps1.
+**********************
+Windows PowerShell transcript end
+End time: 20261109002104
+**********************

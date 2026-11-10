@@ -1,0 +1,17 @@
+﻿pg_dump -Fc (giay): 0.44
+pg_dump -Fp (giay): 0.3
+basebackup full (giay): 7.19
+basebackup incremental (giay): 6.02
+pg_combinebackup (giay): 18.06
+Kich thuoc (MB) full / inc / combined: 32 / 4.1 / 32.1
+TRUOC xoa: chung_tu: 13
+TRUOC xoa: so_cai: 38
+Moc thoi gian PITR: 2026-11-08 02:17:09.076747+07
+PITR theo_ten: sao chep (giay): 0.8
+PITR theo_ten: replay+promote (giay): 7.3
+PITR theo_ten: chung_tu / so_cai / lech: 13 / 38 / 0
+PITR theo_thoi_diem: sao chep (giay): 0.8
+PITR theo_thoi_diem: replay+promote (giay): 7.3
+PITR theo_thoi_diem: chung_tu / so_cai / lech: 13 / 38 / 0
+RPO do duoc (giay) 3 lan: 38.5 / 59 / 59.2
+Ghi chu: sau khi khoi dong lai server, lan luu WAL dau tien tre den checkpoint dau (5 phut); do RPO khi server da on dinh.

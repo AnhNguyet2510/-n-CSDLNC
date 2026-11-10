@@ -1,0 +1,56 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261109002230
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+== PITR theo Gio : thu muc F:\lab5\restore_time, cong 55493 ==
+Muc tieu: recovery_target_time = '2026-11-09 00:21:59.841681+07'
+logging_collector = off
+
+# ---- Cau hinh Task 5: phuc hoi PITR ----
+port = 55493
+archive_mode = off
+restore_command = 'copy "F:\\lab5\\wal_archive\\%f" "%p"'
+recovery_target_time = '2026-11-09 00:21:59.841681+07'
+recovery_target_action = 'promote'
+waiting for server to start......... done
+server started
+RTO (chep + phuc hoi) PITR theo Gio: 8.2 giay
+== Doi chieu du lieu sau khoi phuc ==
+ ct | sc | lech
+----+----+------
+ 13 | 38 |    0
+(1 row)
+  soct
+---------
+ LAB5-A1
+ LAB5-A2
+ LAB5-B1
+ LAB5-B2
+(4 rows)
+== Cac dong log quan trong ==
+2026-11-09 00:22:37.211 +07 [19192] LOG:  starting point-in-time recovery to 2026-11-09 00:21:59.841681+07
+2026-11-09 00:22:37.227 +07 [19192] LOG:  redo starts at 0/3000028
+2026-11-09 00:22:37.248 +07 [16520] LOG:  database system is ready to accept read-only connections
+2026-11-09 00:22:37.852 +07 [19192] LOG:  recovery stopping before commit of transaction 945, time 2026-11-09 00:22:03.106356+07
+2026-11-09 00:22:37.852 +07 [19192] LOG:  redo done at 0/700FD40 system usage: CPU: user: 0.00 s, system: 0.03 s, elapsed: 0.62 s
+2026-11-09 00:22:38.010 +07 [19192] LOG:  archive recovery complete
+2026-11-09 00:22:38.231 +07 [16520] LOG:  database system is ready to accept connections
+KET QUA PITR (Gio): PASS (ct=13 sc=38 lech=0, du 4 chung tu LAB5-)
+**********************
+Windows PowerShell transcript end
+End time: 20261109002239
+**********************

@@ -1,0 +1,56 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261109002219
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+== PITR theo Ten : thu muc F:\lab5\restore, cong 55492 ==
+Muc tieu: recovery_target_name = 'truoc_xoa_nham'
+logging_collector = off
+
+# ---- Cau hinh Task 5: phuc hoi PITR ----
+port = 55492
+archive_mode = off
+restore_command = 'copy "F:\\lab5\\wal_archive\\%f" "%p"'
+recovery_target_name = 'truoc_xoa_nham'
+recovery_target_action = 'promote'
+waiting for server to start......... done
+server started
+RTO (chep + phuc hoi) PITR theo Ten: 9.3 giay
+== Doi chieu du lieu sau khoi phuc ==
+ ct | sc | lech
+----+----+------
+ 13 | 38 |    0
+(1 row)
+  soct
+---------
+ LAB5-A1
+ LAB5-A2
+ LAB5-B1
+ LAB5-B2
+(4 rows)
+== Cac dong log quan trong ==
+2026-11-09 00:22:26.540 +07 [19304] LOG:  starting point-in-time recovery to "truoc_xoa_nham"
+2026-11-09 00:22:26.552 +07 [19304] LOG:  redo starts at 0/3000028
+2026-11-09 00:22:26.564 +07 [5548] LOG:  database system is ready to accept read-only connections
+2026-11-09 00:22:27.187 +07 [19304] LOG:  recovery stopping at restore point "truoc_xoa_nham", time 2026-11-09 00:21:54.680183+07
+2026-11-09 00:22:27.187 +07 [19304] LOG:  redo done at 0/7007880 system usage: CPU: user: 0.00 s, system: 0.01 s, elapsed: 0.63 s
+2026-11-09 00:22:27.592 +07 [19304] LOG:  archive recovery complete
+2026-11-09 00:22:28.688 +07 [5548] LOG:  database system is ready to accept connections
+KET QUA PITR (Ten): PASS (ct=13 sc=38 lech=0, du 4 chung tu LAB5-)
+**********************
+Windows PowerShell transcript end
+End time: 20261109002230
+**********************

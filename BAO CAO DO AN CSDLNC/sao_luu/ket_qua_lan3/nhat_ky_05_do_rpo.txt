@@ -1,0 +1,55 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261109002945
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+CREATE TABLE
+Lan 1: do tre COMMIT -> da archive = 53.2 giay (WAL 00000001000000000000000B, da archive)
+PS>TerminatingError(New-Item): "Cannot bind argument to parameter 'Path' because it is an empty array."
+>> TerminatingError(New-Item): "Cannot bind argument to parameter 'Path' because it is an empty array."
+**********************
+Windows PowerShell transcript end
+End time: 20261109003047
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20261109003233
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+CREATE TABLE
+Lan 1: do tre COMMIT -> da archive = 52.1 giay (WAL 00000001000000000000000D, da archive)
+Lan 2: do tre COMMIT -> da archive = 51.4 giay (WAL 00000001000000000000000E, da archive)
+Lan 3: do tre COMMIT -> da archive = 52.6 giay (WAL 00000001000000000000000F, da archive)
+DROP TABLE
+Cac lan do (giay): 52.1 / 51.4 / 52.6 | trung binh 52
+Ghi chu cho bao cao: day la do tre luu WAL (do gian tiep), khong phai mo phong mat o dia.
+**********************
+Windows PowerShell transcript end
+End time: 20261109003534
+**********************

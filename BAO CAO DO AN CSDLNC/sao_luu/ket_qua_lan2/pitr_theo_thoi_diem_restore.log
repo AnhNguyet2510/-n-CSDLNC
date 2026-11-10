@@ -1,0 +1,47 @@
+2026-11-08 02:34:05.239 +07 [984] LOG:  starting PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+2026-11-08 02:34:05.240 +07 [984] LOG:  listening on IPv4 address "127.0.0.1", port 55493
+2026-11-08 02:34:05.353 +07 [10992] LOG:  database system was interrupted; last known up at 2026-11-08 02:14:43 +07
+2026-11-08 02:34:05.743 +07 [11596] FATAL:  the database system is starting up
+2026-11-08 02:34:06.097 +07 [892] FATAL:  the database system is starting up
+2026-11-08 02:34:06.489 +07 [4148] FATAL:  the database system is starting up
+2026-11-08 02:34:06.856 +07 [6916] FATAL:  the database system is starting up
+2026-11-08 02:34:07.226 +07 [9392] FATAL:  the database system is starting up
+2026-11-08 02:34:07.571 +07 [5196] FATAL:  the database system is starting up
+2026-11-08 02:34:07.911 +07 [11628] FATAL:  the database system is starting up
+2026-11-08 02:34:08.216 +07 [13420] FATAL:  the database system is starting up
+2026-11-08 02:34:08.536 +07 [13008] FATAL:  the database system is starting up
+2026-11-08 02:34:08.848 +07 [6068] FATAL:  the database system is starting up
+2026-11-08 02:34:09.193 +07 [11324] FATAL:  the database system is starting up
+2026-11-08 02:34:09.551 +07 [1216] FATAL:  the database system is starting up
+2026-11-08 02:34:09.975 +07 [5328] FATAL:  the database system is starting up
+2026-11-08 02:34:10.398 +07 [9908] FATAL:  the database system is starting up
+2026-11-08 02:34:10.775 +07 [3880] FATAL:  the database system is starting up
+2026-11-08 02:34:11.145 +07 [11364] FATAL:  the database system is starting up
+The system cannot find the file specified.
+2026-11-08 02:34:11.312 +07 [10992] LOG:  starting backup recovery with redo LSN 0/B000028, checkpoint LSN 0/B000080, on timeline ID 1
+        1 file(s) copied.
+2026-11-08 02:34:11.353 +07 [10992] LOG:  restored log file "00000001000000000000000B" from archive
+2026-11-08 02:34:11.424 +07 [10992] LOG:  starting point-in-time recovery to 2026-11-08 02:17:09.076747+07
+2026-11-08 02:34:11.435 +07 [10992] LOG:  redo starts at 0/B000028
+2026-11-08 02:34:11.444 +07 [10992] LOG:  completed backup recovery with redo LSN 0/B000028 and end LSN 0/B000120
+2026-11-08 02:34:11.444 +07 [10992] LOG:  consistent recovery state reached at 0/B000120
+2026-11-08 02:34:11.446 +07 [984] LOG:  database system is ready to accept read-only connections
+        1 file(s) copied.
+2026-11-08 02:34:11.504 +07 [10992] LOG:  restored log file "00000001000000000000000C" from archive
+2026-11-08 02:34:11.599 +07 [10992] LOG:  recovery stopping before commit of transaction 871, time 2026-11-08 02:17:12.284373+07
+2026-11-08 02:34:11.599 +07 [10992] LOG:  redo done at 0/C00D998 system usage: CPU: user: 0.00 s, system: 0.01 s, elapsed: 0.16 s
+2026-11-08 02:34:11.599 +07 [10992] LOG:  last completed transaction was at log time 2026-11-08 02:17:08.734757+07
+The system cannot find the file specified.
+2026-11-08 02:34:11.619 +07 [10992] LOG:  selected new timeline ID: 2
+The system cannot find the file specified.
+2026-11-08 02:34:11.897 +07 [10992] LOG:  archive recovery complete
+2026-11-08 02:34:11.900 +07 [12628] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-08 02:34:12.035 +07 [12628] LOG:  checkpoint complete: wrote 30 buffers (0.2%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 1 recycled; write=0.026 s, sync=0.072 s, total=0.137 s; sync files=34, longest=0.008 s, average=0.003 s; distance=16438 kB, estimate=16438 kB; lsn=0/C00D998, redo lsn=0/C00D998
+2026-11-08 02:34:12.085 +07 [984] LOG:  database system is ready to accept connections
+2026-11-08 02:34:12.806 +07 [984] LOG:  received fast shutdown request
+2026-11-08 02:34:12.813 +07 [984] LOG:  aborting any active transactions
+2026-11-08 02:34:12.822 +07 [984] LOG:  background worker "logical replication launcher" (PID 3164) exited with exit code 1
+2026-11-08 02:34:12.824 +07 [12628] LOG:  shutting down
+2026-11-08 02:34:12.826 +07 [12628] LOG:  checkpoint starting: shutdown immediate
+2026-11-08 02:34:12.854 +07 [12628] LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.008 s, total=0.030 s; sync files=3, longest=0.003 s, average=0.003 s; distance=18 kB, estimate=14796 kB; lsn=0/C0122C0, redo lsn=0/C0122C0
+2026-11-08 02:34:12.900 +07 [984] LOG:  database system is shut down

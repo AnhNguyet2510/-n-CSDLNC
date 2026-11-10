@@ -1,0 +1,10 @@
+﻿SO DO THUC TE - TASK 5 (may ca nhan, mot lan do moi loai, du lieu nho)
+pg_restore (logic): 0.34 giay
+Sao luu vat ly toan phan: 12.10 giay, 56.4 MB
+Sao luu vat ly gia tang: 5.75 giay, 21.0 MB
+base_combined: 56.4 MB
+RTO PITR theo ten moc: 18.1 giay
+RTO PITR theo thoi diem: 10.2 giay
+Ket qua PITR: 13 chung tu, 38 so cai, lech = 0
+RPO (do tre archive, archive_timeout=60): 53.2 / 52.4 / 51.7 giay
+pg_dump: (chua ghi lai thoi gian)

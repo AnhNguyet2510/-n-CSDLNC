@@ -1,0 +1,30 @@
+2026-11-09 00:22:31.840 +07 [16520] LOG:  starting PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+2026-11-09 00:22:31.841 +07 [16520] LOG:  listening on IPv4 address "127.0.0.1", port 55493
+2026-11-09 00:22:31.940 +07 [19192] LOG:  database system was interrupted; last known up at 2026-11-09 00:20:26 +07
+The system cannot find the file specified.
+2026-11-09 00:22:37.064 +07 [19192] LOG:  starting backup recovery with redo LSN 0/3000028, checkpoint LSN 0/3000080, on timeline ID 1
+        1 file(s) copied.
+2026-11-09 00:22:37.132 +07 [19192] LOG:  restored log file "000000010000000000000003" from archive
+2026-11-09 00:22:37.211 +07 [19192] LOG:  starting point-in-time recovery to 2026-11-09 00:21:59.841681+07
+2026-11-09 00:22:37.227 +07 [19192] LOG:  redo starts at 0/3000028
+2026-11-09 00:22:37.247 +07 [19192] LOG:  completed backup recovery with redo LSN 0/3000028 and end LSN 0/3051C98
+2026-11-09 00:22:37.248 +07 [19192] LOG:  consistent recovery state reached at 0/3051C98
+2026-11-09 00:22:37.248 +07 [16520] LOG:  database system is ready to accept read-only connections
+        1 file(s) copied.
+2026-11-09 00:22:37.342 +07 [19192] LOG:  restored log file "000000010000000000000004" from archive
+        1 file(s) copied.
+2026-11-09 00:22:37.493 +07 [19192] LOG:  restored log file "000000010000000000000005" from archive
+        1 file(s) copied.
+2026-11-09 00:22:37.625 +07 [19192] LOG:  restored log file "000000010000000000000006" from archive
+        1 file(s) copied.
+2026-11-09 00:22:37.761 +07 [19192] LOG:  restored log file "000000010000000000000007" from archive
+2026-11-09 00:22:37.852 +07 [19192] LOG:  recovery stopping before commit of transaction 945, time 2026-11-09 00:22:03.106356+07
+2026-11-09 00:22:37.852 +07 [19192] LOG:  redo done at 0/700FD40 system usage: CPU: user: 0.00 s, system: 0.03 s, elapsed: 0.62 s
+2026-11-09 00:22:37.852 +07 [19192] LOG:  last completed transaction was at log time 2026-11-09 00:21:54.272766+07
+The system cannot find the file specified.
+2026-11-09 00:22:37.868 +07 [19192] LOG:  selected new timeline ID: 2
+The system cannot find the file specified.
+2026-11-09 00:22:38.010 +07 [19192] LOG:  archive recovery complete
+2026-11-09 00:22:38.014 +07 [15944] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-09 00:22:38.182 +07 [15944] LOG:  checkpoint complete: wrote 108 buffers (0.7%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 4 recycled; write=0.033 s, sync=0.097 s, total=0.171 s; sync files=52, longest=0.003 s, average=0.002 s; distance=65599 kB, estimate=65599 kB; lsn=0/700FD40, redo lsn=0/700FD40
+2026-11-09 00:22:38.231 +07 [16520] LOG:  database system is ready to accept connections

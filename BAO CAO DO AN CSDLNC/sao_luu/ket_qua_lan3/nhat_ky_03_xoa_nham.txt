@@ -1,0 +1,51 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261109002154
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+== Buoc 1: them 2 chung tu moi (chi co trong WAL, khong co trong ban sao luu nao) ==
+psql:F:/lab5/them_ct.sql:10: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 12 (1 dÃ²ng, tá»•ng tiá»n 100000.00)
+psql:F:/lab5/them_ct.sql:10: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 13 (1 dÃ²ng, tá»•ng tiá»n 100000.00)
+ ct | sc | lech |              now
+----+----+------+-------------------------------
+ 13 | 38 |    0 | 2026-11-09 00:21:54.339342+07
+(1 row)
+== Buoc 2: dat moc phuc hoi co ten ==
+ pg_create_restore_point
+-------------------------
+ 0/70078E8
+(1 row)
+== Buoc 3: lay gio muc tieu (sau moc, truoc lenh xoa) ==
+Gio muc tieu cho PITR theo thoi diem: 2026-11-09 00:21:59.841681+07
+== Buoc 4: gia lap xoa nham bang TRUNCATE (da COMMIT) ==
+TRUNCATE TABLE
+ pg_switch_wal
+---------------
+ 0/7010140
+(1 row)
+ ct_sau_xoa
+------------
+          0
+(1 row)
+ archived_count | failed_count
+----------------+--------------
+              9 |            0
+(1 row)
+KET QUA: PASS (da xoa nham, chung_tu rong tren cluster goc). Chay tiep 04_phuc_hoi_pitr.ps1.
+**********************
+Windows PowerShell transcript end
+End time: 20261109002208
+**********************

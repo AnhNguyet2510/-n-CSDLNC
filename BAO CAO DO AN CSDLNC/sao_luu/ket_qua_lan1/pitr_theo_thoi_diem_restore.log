@@ -1,0 +1,39 @@
+2026-11-08 00:43:38.272 +07 [14128] LOG:  starting PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+2026-11-08 00:43:38.274 +07 [14128] LOG:  listening on IPv4 address "127.0.0.1", port 55493
+2026-11-08 00:43:38.395 +07 [2940] LOG:  database system was interrupted; last known up at 2026-11-07 16:35:54 +07
+The system cannot find the file specified.
+2026-11-08 00:43:45.032 +07 [2940] LOG:  starting backup recovery with redo LSN 0/8000028, checkpoint LSN 0/8000080, on timeline ID 1
+        1 file(s) copied.
+2026-11-08 00:43:45.109 +07 [2940] LOG:  restored log file "000000010000000000000008" from archive
+2026-11-08 00:43:45.191 +07 [2940] LOG:  starting point-in-time recovery to 2026-11-07 16:53:11+07
+2026-11-08 00:43:45.217 +07 [2940] LOG:  redo starts at 0/8000028
+2026-11-08 00:43:45.245 +07 [2940] LOG:  completed backup recovery with redo LSN 0/8000028 and end LSN 0/8000158
+2026-11-08 00:43:45.246 +07 [2940] LOG:  consistent recovery state reached at 0/8000158
+2026-11-08 00:43:45.247 +07 [14128] LOG:  database system is ready to accept read-only connections
+        1 file(s) copied.
+2026-11-08 00:43:45.355 +07 [2940] LOG:  restored log file "000000010000000000000009" from archive
+        1 file(s) copied.
+2026-11-08 00:43:45.501 +07 [2940] LOG:  restored log file "00000001000000000000000A" from archive
+        1 file(s) copied.
+2026-11-08 00:43:45.686 +07 [2940] LOG:  restored log file "00000001000000000000000B" from archive
+        1 file(s) copied.
+2026-11-08 00:43:45.913 +07 [2940] LOG:  restored log file "00000001000000000000000C" from archive
+        1 file(s) copied.
+2026-11-08 00:43:46.097 +07 [2940] LOG:  restored log file "00000001000000000000000D" from archive
+2026-11-08 00:43:46.196 +07 [2940] LOG:  recovery stopping before commit of transaction 968, time 2026-11-07 16:53:14.463911+07
+2026-11-08 00:43:46.197 +07 [2940] LOG:  redo done at 0/D0084B0 system usage: CPU: user: 0.01 s, system: 0.04 s, elapsed: 0.98 s
+2026-11-08 00:43:46.197 +07 [2940] LOG:  last completed transaction was at log time 2026-11-07 16:52:27.923905+07
+The system cannot find the file specified.
+2026-11-08 00:43:46.229 +07 [2940] LOG:  selected new timeline ID: 2
+The system cannot find the file specified.
+2026-11-08 00:43:46.518 +07 [2940] LOG:  archive recovery complete
+2026-11-08 00:43:46.526 +07 [7564] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-08 00:43:46.774 +07 [7564] LOG:  checkpoint complete: wrote 30 buffers (0.2%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 3 recycled; write=0.076 s, sync=0.094 s, total=0.253 s; sync files=34, longest=0.005 s, average=0.003 s; distance=81953 kB, estimate=81953 kB; lsn=0/D0084B0, redo lsn=0/D0084B0
+2026-11-08 00:43:46.809 +07 [14128] LOG:  database system is ready to accept connections
+2026-11-08 00:45:59.548 +07 [14128] LOG:  received fast shutdown request
+2026-11-08 00:45:59.553 +07 [14128] LOG:  aborting any active transactions
+2026-11-08 00:45:59.565 +07 [14128] LOG:  background worker "logical replication launcher" (PID 1052) exited with exit code 1
+2026-11-08 00:45:59.566 +07 [7564] LOG:  shutting down
+2026-11-08 00:45:59.568 +07 [7564] LOG:  checkpoint starting: shutdown immediate
+2026-11-08 00:45:59.606 +07 [7564] LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 2 recycled; write=0.003 s, sync=0.006 s, total=0.040 s; sync files=3, longest=0.003 s, average=0.002 s; distance=18 kB, estimate=73759 kB; lsn=0/D00CDB8, redo lsn=0/D00CDB8
+2026-11-08 00:45:59.626 +07 [14128] LOG:  database system is shut down

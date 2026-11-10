@@ -1,0 +1,146 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261109001840
+Username: ADMIN\Admin
+RunAs User: ADMIN\Admin
+Configuration Name: 
+Machine: ADMIN (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11128
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Da xoa du lieu lab trong 'F:\lab5' (giu lai thu muc ket_qua).
+== Buoc 1: initdb ==
+The files belonging to this database system will be owned by user "Admin".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+creating directory F:/lab5/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... windows
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Asia/Bangkok
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    ^"C^:^\Program^ Files^\PostgreSQL^\18^\bin^\pg^_ctl^" -D ^"F^:^\lab5^\data^" -l logfile start
+== Buoc 2: ghi cau hinh WAL archiving ==
+# Add settings for extensions here
+
+# ---- Cau hinh Task 5: WAL archiving ----
+port = 55491
+listen_addresses = '127.0.0.1'
+cluster_name = 'task5_lab'
+archive_mode = on
+archive_command = 'if not exist "F:\\lab5\\wal_archive\\%f" copy "%p" "F:\\lab5\\wal_archive\\%f"'
+archive_timeout = 60
+summarize_wal = on
+log_line_prefix = '%m [%p] '
+logging_collector = off
+== Buoc 3: khoi dong server va tao database ==
+waiting for server to start.... done
+server started
+CREATE DATABASE
+== Buoc 4: nap 01..03 (DDL, trigger/thu tuc, du lieu mau) ==
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:20: NOTICE:  table "so_cai" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:21: NOTICE:  table "chi_tiet_chung_tu" does not exist, ski
+pping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:22: NOTICE:  table "chung_tu" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:23: NOTICE:  table "nhan_vien" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:24: NOTICE:  table "nha_cung_cap" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:25: NOTICE:  table "khach_hang" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:26: NOTICE:  table "doi_tuong" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:27: NOTICE:  table "tai_khoan" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:28: NOTICE:  table "loai_chung_tu" does not exist, skippin
+g
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/01_tao_bang.sql:29: NOTICE:  table "ky_ke_toan" does not exist, skipping
+  da nap 01_tao_bang.sql
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:87: NOTICE:  trigger "trg_tk_kiem_tra" fo
+r relation "tai_khoan" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:110: NOTICE:  trigger "trg_kh_loai" for r
+elation "khach_hang" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:114: NOTICE:  trigger "trg_ncc_loai" for
+relation "nha_cung_cap" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:118: NOTICE:  trigger "trg_nv_loai" for r
+elation "nhan_vien" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:174: NOTICE:  trigger "trg_ct_kiem_tra" f
+or relation "chung_tu" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:189: NOTICE:  trigger "trg_ct_chan_xoa" f
+or relation "chung_tu" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:238: NOTICE:  trigger "trg_ctct_kiem_tra"
+ for relation "chi_tiet_chung_tu" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:260: NOTICE:  trigger "trg_ctct_cap_nhat_
+tong" for relation "chi_tiet_chung_tu" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:283: NOTICE:  trigger "trg_socai_bao_ve"
+for relation "so_cai" does not exist, skipping
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/02_rang_buoc_trigger_thu_tuc.sql:316: NOTICE:  trigger "trg_socai_can_doi"
+ for relation "so_cai" does not exist, skipping
+  da nap 02_rang_buoc_trigger_thu_tuc.sql
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:102: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 1 (2 dÃ²ng, tá
+»•ng tiá»n 600000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:115: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 2 (2 dÃ²ng, tá
+»•ng tiá»n 88000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:127: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 3 (1 dÃ²ng, tá
+»•ng tiá»n 50000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:141: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 4 (3 dÃ²ng, tá
+»•ng tiá»n 53000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:160: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 5 (1 dÃ²ng, tá
+»•ng tiá»n 20000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:172: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 6 (1 dÃ²ng, tá
+»•ng tiá»n 2000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:186: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 7 (3 dÃ²ng, tá
+»•ng tiá»n 17000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:198: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 8 (1 dÃ²ng, tá
+»•ng tiá»n 15000000.00)
+psql:F:/Github/-n-CSDLNC/BAO CAO DO AN CSDLNC/03_du_lieu_mau.sql:214: NOTICE:  ÄÃ£ ghi sá»• chá»©ng tá»« 9 (1 dÃ²ng, tá
+»•ng tiá»n 15000000.00)
+       bang        | so_dong
+-------------------+---------
+ KY_KE_TOAN        |       3
+ TAI_KHOAN         |      20
+ DOI_TUONG         |       6
+ CHUNG_TU          |       9
+ CHI_TIET_CHUNG_TU |      15
+ SO_CAI            |      30
+(6 rows)
+  da nap 03_du_lieu_mau.sql
+== Buoc 5: kiem tra du lieu va WAL archiving ==
+ ct | sc | lech
+----+----+------
+  9 | 30 |    0
+(1 row)
+ pg_switch_wal
+---------------
+ 0/1CCE158
+(1 row)
+ archived_count | failed_count |    last_archived_wal
+----------------+--------------+--------------------------
+              1 |            0 | 000000010000000000000001
+(1 row)
+
+Name                       Length
+----                       ------
+000000010000000000000001 16777216
+
+
+KET QUA: PASS (9 chung tu, 30 dong so cai, lech = 0, archive khong loi)
+**********************
+Windows PowerShell transcript end
+End time: 20261109001858
+**********************

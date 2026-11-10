@@ -1,0 +1,63 @@
+2026-11-07 16:07:27.836 +07 [19236] LOG:  starting PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+2026-11-07 16:07:27.837 +07 [19236] LOG:  listening on IPv4 address "127.0.0.1", port 55491
+2026-11-07 16:07:27.948 +07 [16420] LOG:  database system was shut down at 2026-11-07 16:01:47 +07
+2026-11-07 16:07:27.956 +07 [19236] LOG:  database system is ready to accept connections
+2026-11-07 16:07:50.768 +07 [16356] ERROR:  character with byte sequence 0x9d in encoding "WIN1252" has no equivalent in encoding "UTF8"
+2026-11-07 16:07:50.852 +07 [20036] ERROR:  character with byte sequence 0x81 in encoding "WIN1252" has no equivalent in encoding "UTF8"
+2026-11-07 16:10:16.191 +07 [2872] LOG:  checkpoint starting: immediate force wait
+2026-11-07 16:10:16.348 +07 [2872] LOG:  checkpoint complete: wrote 46 buffers (0.3%), wrote 3 SLRU buffers; 1 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.040 s, total=0.158 s; sync files=14, longest=0.004 s, average=0.003 s; distance=5294 kB, estimate=5294 kB; lsn=0/1D14180, redo lsn=0/1D14128
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-07 16:15:16.382 +07 [2872] LOG:  checkpoint starting: time
+        1 file(s) copied.
+2026-11-07 16:17:13.382 +07 [2872] LOG:  checkpoint complete: wrote 1062 buffers (6.5%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 2 recycled; write=116.242 s, sync=0.727 s, total=117.002 s; sync files=333, longest=0.005 s, average=0.003 s; distance=19375 kB, estimate=19375 kB; lsn=0/401D5F8, redo lsn=0/3000060
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-07 16:25:16.846 +07 [2872] LOG:  checkpoint starting: time
+        1 file(s) copied.
+2026-11-07 16:27:13.557 +07 [2872] LOG:  checkpoint complete: wrote 1052 buffers (6.4%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 3 recycled; write=115.696 s, sync=0.860 s, total=116.712 s; sync files=344, longest=0.018 s, average=0.003 s; distance=49151 kB, estimate=49151 kB; lsn=0/7000060, redo lsn=0/6000028
+        1 file(s) copied.
+2026-11-07 16:35:54.312 +07 [2872] LOG:  checkpoint starting: immediate force wait
+2026-11-07 16:35:54.329 +07 [2872] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.018 s; sync files=0, longest=0.000 s, average=0.000 s; distance=32768 kB, estimate=47513 kB; lsn=0/8000080, redo lsn=0/8000028
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-07 16:40:39.415 +07 [2872] LOG:  checkpoint starting: immediate force wait
+        1 file(s) copied.
+2026-11-07 16:40:39.515 +07 [2872] LOG:  checkpoint complete: wrote 16 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 2 recycled; write=0.016 s, sync=0.041 s, total=0.100 s; sync files=17, longest=0.003 s, average=0.003 s; distance=32768 kB, estimate=46038 kB; lsn=0/A000080, redo lsn=0/A000028
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-07 16:45:39.566 +07 [2872] LOG:  checkpoint starting: time
+2026-11-07 16:45:39.829 +07 [2872] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 2 recycled; write=0.001 s, sync=0.001 s, total=0.263 s; sync files=0, longest=0.000 s, average=0.000 s; distance=16384 kB, estimate=43073 kB; lsn=0/B0000B8, redo lsn=0/B000060
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-07 16:53:09.280 +07 [9956] LOG:  restore point "truoc_xoa_nham" created at 0/D000090
+2026-11-07 16:53:09.280 +07 [9956] STATEMENT:  SELECT pg_create_restore_point('truoc_xoa_nham');
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-07 16:55:39.517 +07 [2872] LOG:  checkpoint starting: time
+2026-11-07 16:55:40.821 +07 [2872] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 1 recycled; write=1.122 s, sync=0.047 s, total=1.305 s; sync files=21, longest=0.009 s, average=0.003 s; distance=65535 kB, estimate=65535 kB; lsn=0/F000080, redo lsn=0/F000028
+        1 file(s) copied.
+2026-11-07 17:18:29.612 +07 [19236] LOG:  autovacuum launcher process (PID 11792) was terminated by exception 0x40010004
+2026-11-07 17:18:29.612 +07 [19236] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2026-11-07 17:18:29.613 +07 [19236] LOG:  terminating any other active server processes
+2026-11-07 17:18:29.716 +07 [19236] LOG:  all server processes terminated; reinitializing
+2026-11-08 00:28:56.506 +07 [11956] LOG:  starting PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+2026-11-08 00:28:56.507 +07 [11956] LOG:  listening on IPv4 address "127.0.0.1", port 55491
+2026-11-08 00:28:56.657 +07 [7532] LOG:  database system was interrupted; last known up at 2026-11-07 16:55:40 +07
+2026-11-08 00:29:01.372 +07 [7532] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-08 00:29:01.379 +07 [7532] LOG:  redo starts at 0/F000028
+2026-11-08 00:29:01.381 +07 [7532] LOG:  unexpected pageaddr 0/A000000 in WAL segment 000000010000000000000010, LSN 0/10000000, offset 0
+2026-11-08 00:29:01.381 +07 [7532] LOG:  redo done at 0/F000130 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-08 00:29:01.410 +07 [13184] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-08 00:29:01.471 +07 [13184] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 4 recycled; write=0.005 s, sync=0.007 s, total=0.081 s; sync files=2, longest=0.004 s, average=0.004 s; distance=16384 kB, estimate=16384 kB; lsn=0/10000028, redo lsn=0/10000028
+2026-11-08 00:29:01.573 +07 [11956] LOG:  database system is ready to accept connections
+        1 file(s) copied.
+2026-11-08 00:42:19.966 +07 [3632] ERROR:  table "rpo_test" does not exist
+2026-11-08 00:42:19.966 +07 [3632] STATEMENT:  DROP TABLE rpo_test;
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+2026-11-08 00:49:01.839 +07 [13184] LOG:  checkpoint starting: time
+2026-11-08 00:49:05.651 +07 [13184] LOG:  checkpoint complete: wrote 33 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 1 recycled; write=3.688 s, sync=0.081 s, total=3.813 s; sync files=29, longest=0.009 s, average=0.003 s; distance=65536 kB, estimate=65536 kB; lsn=0/14000128, redo lsn=0/140000D0
+        1 file(s) copied.
+        1 file(s) copied.

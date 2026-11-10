@@ -1,0 +1,10 @@
+﻿      name       |                                 setting                                  
+-----------------+--------------------------------------------------------------------------
+ archive_command | if not exist "F:\lab5\wal_archive\%f" copy "%p" "F:\lab5\wal_archive\%f"
+ archive_mode    | on
+ archive_timeout | 60
+ port            | 55491
+ summarize_wal   | on
+ wal_level       | replica
+(6 rows)
+
